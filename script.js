@@ -1,7 +1,7 @@
 const SUPABASE_URL = "https://wkjffzojirabmmyupqnc.supabase.co/rest/v1/";
 const SUPABASE_ANON_KEY = "sb_publishable_U09_Lbeq10Bpfx4bm81TSA_lSe68d95";
 
-const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const button = document.getElementById('fetch-btn');
 const output = document.getElementById('output');
@@ -9,7 +9,7 @@ const output = document.getElementById('output');
 async function getData() {
     output.innerText = "Loading...";
 
-    let { data, error } = await supabase
+    let { data, error } = await supabaseClient
         .from('items')
         .select('name');
 

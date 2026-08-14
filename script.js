@@ -10,7 +10,7 @@ async function getData() {
     output.innerText = "Loading...";
 
     let { data, error } = await supabaseClient
-        .from('items')
+        .from('Items')
         .select('name');
 
     if (error) {

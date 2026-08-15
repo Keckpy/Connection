@@ -1,0 +1,139 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3ecf8e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #2eaf76;
+}
+
+table {
+    margin-top: 25px;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #3ecf8e;
+    color: white;
+    font-weight: bold;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eeeeee;
+    color: #333333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Modal Backdrop Overlay Wrapper */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Modal Content Box Framework */
+.modal-content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 90%;
+    max-width: 350px;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Input Form Controls */
+.modal-input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Button Group Alignment Layout */
+.modal-actions {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.btn-secondary {
+    background-color: #777777;
+}
+
+.btn-secondary:hover {
+    background-color: #555555;
+}
+
+/* Utility Hidden View Hook */
+.hidden {
+    display: none !important;
+}
+
+/* Delete Danger Action Properties Layout Hook */
+.btn-danger {
+    background-color: #e63946;
+    padding: 6px 12px;
+    font-size: 13px;
+    box-shadow: none;
+    border-radius: 4px;
+}
+
+.btn-danger:hover {
+    background-color: #c92a3a;
+}
+
+/* Ensure horizontal spacing handles actions column cleanly */
+th, td {
+    text-align: center;
+}

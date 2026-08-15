@@ -1,0 +1,22 @@
+<table id="data-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item Name</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each itemsList}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.name}}</td>
+            <td>{{formatDate this.created_at}}</td>
+            <td>
+                <button class="delete-btn btn-danger" data-id="{{this.id}}">Delete</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

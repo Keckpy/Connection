@@ -47,7 +47,7 @@ jobs:
       - name: Upload Compiled Static Site Assets
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'project/dist'
+          path: 'dist'
 
       - name: Deploy Live to GitHub Pages Site
         id: deployment

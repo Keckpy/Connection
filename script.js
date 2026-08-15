@@ -11,7 +11,7 @@ async function getData() {
 
     let { data, error } = await supabaseClient
         .from('Items')
-        .select('name');
+        .select('*');
 
     if (error) {
         output.innerText = "Error: " + error.message;

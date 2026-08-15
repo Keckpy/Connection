@@ -10,7 +10,16 @@
 <body>
     <div class="container">
         <button id="fetch-btn">Grab Data</button>
-        <div id="output">Click the button to load data...</div>
+        <table id="data-table" class="hidden-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Item</th>
+                    <th>Created At</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
     </div>
     <script src="script.js" defer></script>
 </body>

@@ -19,9 +19,30 @@ async function getData() {
     }
 
     if (data  && data.length > 0) {
-        output.innerHTML = data.map(item => `<p> ${item.name}</p>`).join('');
+        table.classList.remove('hidden-table');
+
+        data.forEach(item => {
+            const row = document.createElement('tr');
+
+            const idCell = document.createElement('td');
+            idCell.innerText = item.id;
+            idCell.classList.add('cell-center');
+            row.appendChild(idCell);
+        })
+
+        const nameCell = document.createElement('td');
+        nameCell.innerText = item.name;
+        row.appendChild(nameCell);
+
+        const dateCell = document.createElement('td');
+        dateCell.innerText = new Date(item.created_at).toLocaleDateString();
+        dateCell.classList.add('cell-center', 'cell-date');
+        row.appendChild(dateCell);
+
+        tableBody.appendChild(row);
     } else {
-        output.innerText = "No data found. Did you insert a row yet?";
+        table.classList.add('hidden-table');
+        alert("No records found.")
     }
 }
 

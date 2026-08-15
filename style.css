@@ -36,3 +36,45 @@ button:hover {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     margin: 5px 0;
 }
+
+table {
+    margin-top: 25px;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.hidden-table {
+    display: none;
+}
+
+th {
+    background-color: #3ecf8e;
+    color: white;
+    font-weight: bold;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eeeeee;
+    color: #333333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.cell-center {
+    text-align: center;
+}
+
+.cell-date {
+    color: #777777;
+    font-size: 14px;
+}

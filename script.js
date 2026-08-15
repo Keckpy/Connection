@@ -23,18 +23,20 @@ async function getData() {
             idCell.innerText = item.id;
             idCell.classList.add('cell-center');
             row.appendChild(idCell);
+
+            const nameCell = document.createElement('td');
+            nameCell.innerText = item.name;
+            row.appendChild(nameCell);
+
+            const dateCell = document.createElement('td');
+            dateCell.innerText = new Date(item.created_at).toLocaleDateString();
+            dateCell.classList.add('cell-center', 'cell-date');
+            row.appendChild(dateCell);
+
+            tableBody.appendChild(row);
         })
 
-        const nameCell = document.createElement('td');
-        nameCell.innerText = item.name;
-        row.appendChild(nameCell);
-
-        const dateCell = document.createElement('td');
-        dateCell.innerText = new Date(item.created_at).toLocaleDateString();
-        dateCell.classList.add('cell-center', 'cell-date');
-        row.appendChild(dateCell);
-
-        tableBody.appendChild(row);
+        
     } else {
         table.classList.add('hidden-table');
         alert("No records found.")

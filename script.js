@@ -4,19 +4,14 @@ const SUPABASE_ANON_KEY = "sb_publishable_U09_Lbeq10Bpfx4bm81TSA_lSe68d95";
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const button = document.getElementById('fetch-btn');
-const output = document.getElementById('output');
+const table = document.getElementById('data-table');
+const tableBody = document.getElementById('table-body');
 
 async function getData() {
-    output.innerText = "Loading...";
 
     let { data, error } = await supabaseClient
         .from('Items')
         .select('*');
-
-    if (error) {
-        output.innerText = "Error: " + error.message;
-        return;
-    }
 
     if (data  && data.length > 0) {
         table.classList.remove('hidden-table');
